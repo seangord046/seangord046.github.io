@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(#5200AE,#4062BB);
+    color: white;
+    text-align: center;
+  
+  }
+  h1 {
+    color: white;
+    font-size: 40px;
+    font: italic small-caps bold 32px/30px Georgia, serif;
+  }
+  img{
+    margin: auto;
+    display: block;
+    border-radius: 30%;
+  }
+  ul{
+    list-style-type: inside;
+    text-align: center;
+  }
