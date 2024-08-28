@@ -1,9 +1,9 @@
 /* Base styles for the HTML element */
 html {
-    height: 100%; /* Changed to 100% for full viewport height */
-    width: 100%;  /* Changed to 100% for full viewport width */
+    height: 100%; /* Full viewport height */
+    width: 100%;  /* Full viewport width */
     background: linear-gradient(to right, #FF7E5F, #FFB47F); /* Peach sunset gradient */
-    color: #fff; /* Using hex code for white color */
+    color: #fff; /* White color for text */
     text-align: center;
     margin: 0; /* Remove default margin */
     font-family: Georgia, serif; /* Set a base font-family */
@@ -11,28 +11,17 @@ html {
 
 /* Styles for all heading 1 elements */
 h1 {
-    font-size: 2.5rem; /* Changed to rem for better responsiveness */
+    font-size: 2.5rem; /* Responsive font size */
     font-style: italic;
     font-variant: small-caps;
     font-weight: bold;
-    line-height: 1.2; /* Adjust line height for better readability */
-    color: #fff; /* Ensuring color consistency */
+    line-height: 1.2; /* Improve readability */
+    color: #fff; /* Ensure color consistency */
     margin: 0; /* Remove default margin */
 }
 
 /* Styles for all images */
 img {
-    width: 50vw; /* Adjust to take up 50% of viewport width */
+    width: 50vw; /* 50% of viewport width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 15px; /* Subtle rounded corners */
-    margin: 20px auto; /* Center image and add some vertical margin */
-    display: block; /* Ensure images are block-level elements */
-}
-
-/* Styles for all unordered lists */
-ul {
-    list-style-position: inside; /* Better placement for list markers */
-    text-align: center;
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
+    border-radius: 25px; 
