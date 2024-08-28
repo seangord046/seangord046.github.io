@@ -1,22 +1,36 @@
+/* Base styles for the HTML element */
 html {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(#5200AE,#4062BB);
-    color: white;
+    background: linear-gradient(to right, #5200AE, #4062BB);
+    color: #fff; /* Using hex code for white color */
     text-align: center;
-  
-  }
-  h1 {
-    color: white;
+    margin: 0; /* Remove default margin */
+    font-family: Georgia, serif; /* Set a base font-family */
+}
+
+/* Styles for all heading 1 elements */
+h1 {
     font-size: 40px;
-    font: italic small-caps bold 32px/30px Georgia, serif;
-  }
-  img{
-    margin: auto;
-    display: block;
-    border-radius: 30%;
-  }
-  ul{
-    list-style-type: inside;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 1.2; /* Adjust line height for better readability */
+    color: #fff; /* Ensuring color consistency */
+    margin: 0; /* Remove default margin */
+}
+
+/* Styles for all images */
+img {
+    margin: 0 auto; /* Center images horizontally */
+    display: block; /* Ensure images are block-level elements */
+    border-radius: 15%; /* More subtle rounded corners */
+}
+
+/* Styles for all unordered lists */
+ul {
+    list-style-position: inside; /* Better placement for list markers */
     text-align: center;
-  }
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
