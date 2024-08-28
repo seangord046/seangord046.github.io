@@ -1,7 +1,7 @@
 /* Base styles for the HTML element */
 html {
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     background: linear-gradient(to right, #5200AE, #4062BB);
     color: #fff; /* Using hex code for white color */
     text-align: center;
