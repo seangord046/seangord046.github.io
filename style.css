@@ -1,8 +1,8 @@
 /* Base styles for the HTML element */
 html {
-    height: 50%;
-    width: 50%;
-    background: linear-gradient(to right, #5200AE, #4062BB);
+    height: 100%; /* Changed to 100% for full viewport height */
+    width: 100%;  /* Changed to 100% for full viewport width */
+    background: linear-gradient(to right, #FF7E5F, #FFB47F); /* Peach sunset gradient */
     color: #fff; /* Using hex code for white color */
     text-align: center;
     margin: 0; /* Remove default margin */
@@ -11,7 +11,7 @@ html {
 
 /* Styles for all heading 1 elements */
 h1 {
-    font-size: 40px;
+    font-size: 2.5rem; /* Changed to rem for better responsiveness */
     font-style: italic;
     font-variant: small-caps;
     font-weight: bold;
@@ -22,9 +22,11 @@ h1 {
 
 /* Styles for all images */
 img {
-    margin: 0 auto; /* Center images horizontally */
+    width: 50vw; /* Adjust to take up 50% of viewport width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Subtle rounded corners */
+    margin: 20px auto; /* Center image and add some vertical margin */
     display: block; /* Ensure images are block-level elements */
-    border-radius: 15%; /* More subtle rounded corners */
 }
 
 /* Styles for all unordered lists */
