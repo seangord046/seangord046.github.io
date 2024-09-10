@@ -1,27 +1,73 @@
-/* Base styles for the HTML element */
-html {
-    height: 100%; /* Full viewport height */
-    width: 100%;  /* Full viewport width */
-    background: linear-gradient(to right, #FF7E5F, #FFB47F); /* Peach sunset gradient */
-    color: #fff; /* White color for text */
+/* Sunset gradient for background */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to right, #FF7E5F, #FFB47F);
+    font-family: 'Georgia', serif;
+    color: #fff;
     text-align: center;
-    margin: 0; /* Remove default margin */
-    font-family: Georgia, serif; /* Set a base font-family */
 }
 
-/* Styles for all heading 1 elements */
-h1 {
-    font-size: 2.5rem; /* Responsive font size */
-    font-style: italic;
-    font-variant: small-caps;
-    font-weight: bold;
-    line-height: 1.2; /* Improve readability */
-    color: #fff; /* Ensure color consistency */
-    margin: 0; /* Remove default margin */
+/* Sidebar navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 20px;
 }
 
-/* Styles for all images */
-img {
-    width: 50vw; /* 50% of viewport width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 25px; 
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.sidebar ul li a:hover {
+    color: #FFB47F;
+}
+
+/* Main content positioning */
+.content {
+    margin-left: 220px; /* Offset content due to sidebar */
+    padding: 20px;
+}
+
+/* Centering image */
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* Section styling */
+.section {
+    margin: 40px 0;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #FF7E5F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFB47F;
+}

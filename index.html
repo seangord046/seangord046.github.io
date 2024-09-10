@@ -9,51 +9,61 @@
 </head>
 
 <body>
-    <header>
-        <h1>Sean Gordon's Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#name">My Name</a></li>
+            <li><a href="#hobbies">Hobbies & Interests</a></li>
+        </ul>
+    </aside>
 
-    <main>
-        <section id="home" class="home">
-            <h2>Welcome to My Portfolio</h2>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <h1>Welcome to My Portfolio</h1>
             <p>Explore my work, learn more about me, and get in touch.</p>
         </section>
 
-        <section id="portfolio" class="portfolio">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a high school student showcasing my iOS apps from this year!</p>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
             <h2>My Portfolio</h2>
+            <img src="iosapp2.jpg" alt="A screenshot of Sean's iOS app" class="centered-image">
+        </section>
+
+        <!-- My Name Section -->
+        <section id="name" class="section">
+            <h2>My Name (Audio)</h2>
             <audio controls>
                 <source src="seanname.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
-            <img src="iosapp2.jpg" alt="A screenshot of Sean's iOS app">
         </section>
 
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>I am a high school student, showcasing my iOS apps from this year!</p>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Me</h2>
+        <!-- Hobbies & Interests Section -->
+        <section id="hobbies" class="section">
+            <h2>Hobbies & Interests</h2>
             <ul>
                 <li>Hobbies: Playing basketball and drawing</li>
                 <li>Interests: Art and sports</li>
             </ul>
         </section>
-    </main>
+    </div>
 
     <footer>
         <p>© 2024 Sean Gordon. All rights reserved.</p>
-        <script src="script.js"></script>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
