@@ -1,4 +1,4 @@
-/* Sunset gradient for background */
+/* Sunset gradient background */
 html, body {
     height: 100%;
     margin: 0;
@@ -8,66 +8,51 @@ html, body {
     text-align: center;
 }
 
-/* Sidebar navigation */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding-top: 20px;
+/* Navigation menu */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
 }
 
-.sidebar ul {
+nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
-.sidebar ul li {
-    margin: 20px 0;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.sidebar ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-.sidebar ul li a:hover {
+nav ul li a:hover {
     color: #FFB47F;
 }
 
-/* Main content positioning */
-.content {
-    margin-left: 220px; /* Offset content due to sidebar */
+/* Main content sections */
+main {
     padding: 20px;
 }
 
-/* Centering image */
 .centered-image {
     display: block;
     margin: 20px auto;
     width: 50%;
     height: auto;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
-/* Section styling */
-.section {
-    margin: 40px 0;
-}
-
-/* Button styling */
-button {
-    padding: 10px 20px;
-    background-color: #FF7E5F;
+footer {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #FFB47F;
 }
