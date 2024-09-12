@@ -8,109 +8,92 @@ html, body {
     text-align: center;
 }
 
-/* Navigation menu */
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px 0;
-}
-
-nav ul {
+/* Navigation Menu */
+header nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     color: #FFB47F;
 }
 
-/* Main content sections */
-main {
-    padding: 20px;
+/* Section Styling */
+section {
+    margin: 40px 0;
 }
 
+/* Centering images */
 .centered-image {
     display: block;
     margin: 20px auto;
     width: 50%;
     height: auto;
+    border-radius: 25px;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-gallery img {
+    width: 40%;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-footer {
+/* Video Section */
+.video-section {
+    margin: 20px auto;
+}
+
+.video-section video {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Concept List Styling */
+#concepts ul {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+#concepts ul li {
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    color: #fff;
-}
-/* Sunset gradient background */
-html, body {
-    height: 100%;
-    margin: 0;
-    background: linear-gradient(to right, #FF7E5F, #FFB47F);
-    font-family: 'Georgia', serif;
-    color: #fff;
-    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
-/* Navigation menu */
-header {
+/* Footer Styling */
+footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-    color: #FFB47F;
-}
-
-/* Main content sections */
-main {
-    padding: 20px;
-}
-
-.centered-image {
-    display: block;
-    margin: 20px auto;
-    width: 50%;
-    height: auto;
-    border-radius: 15px;
-}
-
-footer {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
     color: #fff;
 }
