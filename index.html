@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean Gordon's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <!-- Navigation Menu -->
     <header>
-        <nav>
+        <nav class="hotter">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="unit1.html">Unit 1</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="unit2.html">Unit 2</a></li>
+                <li><a href="#contact">Get in Touch</a></li>
             </ul>
         </nav>
     </header>
@@ -22,21 +22,41 @@
     <!-- Main Content -->
     <main>
         <section id="welcome">
-            <h1>Sean Gordon's Portfolio</h1>
-            <p>Welcome to my portfolio! Here, you'll find my iOS app projects and more.</p>
+            <h1>Welcome to my Portfolio</h1>
+            <p>Explore my work, learn more about me, and get in touch.</p>
         </section>
 
-        <!-- Image Section -->
+        <!-- Centered Image -->
         <section id="portfolio-image">
             <img src="iosapp2.jpg" alt="A screenshot of Sean's iOS app" class="centered-image">
         </section>
 
-        <!-- About Me Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a high school student passionate about iOS development. This portfolio showcases the work I've done so far in my journey as an app developer.</p>
-            <p>Hobbies: Basketball, Drawing</p>
-            <p>Interests: Art, Sports, and Tech</p>
+        <!-- My Name (Audio) Section -->
+        <section id="name">
+            <h2>My Name</h2>
+            <audio controls>
+                <source src="seanname.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Hobbies & Interests Section -->
+        <section id="hobbies">
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Hobbies: Basketball, Drawing</li>
+                <li>Interests: Art, Sports, Tech</li>
+            </ul>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form action="mailto:seanclaude.gordon@vhhscougars.org" method="post" enctype="text/plain">
+                <label for="message">Your Questions:</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+                <input type="submit" value="Send">
+            </form>
         </section>
     </main>
 
@@ -44,5 +64,4 @@
         <p>© 2024 Sean Gordon. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
