@@ -15,8 +15,6 @@ header nav ul {
     margin: 0;
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    position: sticky;
-    top: 0;
 }
 
 header nav ul li {
@@ -29,46 +27,23 @@ header nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 15px;
-    position: relative;
 }
 
-header nav ul li a::after {
+/* Rainbow flowing underline for buttons and image */
+.rainbow-underline::after {
     content: '';
     display: block;
-    height: 2px;
     width: 100%;
-    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 200% 100%;
+    animation: rainbow-flow 2s infinite;
+    margin-top: 5px;
 }
 
-header nav ul li a:hover::after {
-    transform: scaleX(1);
-}
-
-/* Fancy Header Effect */
-h1 {
-    font-size: 3rem;
-    position: relative;
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(255,255,255,0));
-    pointer-events: none;
-}
-
-h1:hover::after {
-    transition: transform 0.2s;
-    transform: translate(10px, 10px); /* Adjust values for cursor-following effect */
+@keyframes rainbow-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
 }
 
 /* Centering images */
@@ -80,8 +55,6 @@ h1:hover::after {
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-/* Other styles remain the same as provided previously */
 
 /* Responsive Design */
 @media (max-width: 768px) {
