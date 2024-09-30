@@ -1,35 +1,4 @@
-/* Sunset gradient background */
-html, body {
-    height: 100%;
-    margin: 0;
-    background: linear-gradient(to right, #FF7E5F, #FFB47F);
-    font-family: 'Georgia', serif;
-    color: #fff;
-    text-align: center;
-}
-
-/* Navigation Menu */
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px 15px;
-}
-
-/* Rainbow flowing underline for buttons and image */
+/* Rainbow flowing underline for buttons */
 .rainbow-underline::after {
     content: '';
     display: block;
@@ -44,21 +13,4 @@ header nav ul li a {
 @keyframes rainbow-flow {
     0% { background-position: 0 0; }
     100% { background-position: 200% 0; }
-}
-
-/* Centering images */
-.centered-image {
-    display: block;
-    margin: 20px auto;
-    width: 50%;
-    height: auto;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .centered-image {
-        width: 80%;
-    }
 }
