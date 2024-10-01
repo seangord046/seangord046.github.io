@@ -1,3 +1,17 @@
+/* Peach Gradient Background */
+body {
+    background: linear-gradient(180deg, #FFDAB9, #FFB347);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* To ensure sections also use the gradient, if needed */
+section {
+    background: transparent;
+}
+
+/* Rest of your CSS (like the rainbow underline) */
+
 /* Rainbow flowing underline for buttons */
 .rainbow-underline::after {
     content: '';
