@@ -1,18 +1,35 @@
-/* Peach Gradient Background */
-body {
-    background: linear-gradient(180deg, #FFDAB9, #FFB347);
+/* Sunset gradient background */
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #FF7E5F, #FFB47F);
+    font-family: 'Georgia', serif;
+    color: #fff;
+    text-align: center;
 }
 
-/* To ensure sections also use the gradient, if needed */
-section {
-    background: transparent;
+/* Navigation Menu */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
-/* Rest of your CSS (like the rainbow underline) */
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-/* Rainbow flowing underline for buttons */
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+/* Rainbow flowing underline for buttons and image */
 .rainbow-underline::after {
     content: '';
     display: block;
@@ -28,36 +45,20 @@ section {
     0% { background-position: 0 0; }
     100% { background-position: 200% 0; }
 }
-/* Center Navigation Menu */
-header {
-    background-color: rgba(0, 0, 0, 0.1); /* Light background for depth */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    padding: 10px 0; /* Padding for spacing */
-    position: relative; /* Ensure it sits correctly */
-    text-align: center; /* Center the navigation menu */
+
+/* Centering images */
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-nav ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 0;
-    padding: 0;
-    display: inline-block; /* Allow the list to stay in one line */
-}
-
-nav ul li {
-    display: inline; /* Display each item inline */
-    margin: 0 15px; /* Space between menu items */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black; /* Text color */
-    font-weight: bold; /* Bold font for buttons */
-    padding: 10px 15px; /* Padding inside the buttons */
-    background-color: rgba(255, 255, 255, 0.7); /* Background to add depth */
-    border-radius: 5px; /* Rounded corners for buttons */
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .centered-image {
+        width: 80%;
+    }
 }
