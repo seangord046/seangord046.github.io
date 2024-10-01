@@ -28,3 +28,36 @@ section {
     0% { background-position: 0 0; }
     100% { background-position: 200% 0; }
 }
+/* Center Navigation Menu */
+header {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 10px 0; /* Padding for spacing */
+    position: relative; /* Ensure it sits correctly */
+    text-align: center; /* Center the navigation menu */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Allow the list to stay in one line */
+}
+
+nav ul li {
+    display: inline; /* Display each item inline */
+    margin: 0 15px; /* Space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; /* Text color */
+    font-weight: bold; /* Bold font for buttons */
+    padding: 10px 15px; /* Padding inside the buttons */
+    background-color: rgba(255, 255, 255, 0.7); /* Background to add depth */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+}
