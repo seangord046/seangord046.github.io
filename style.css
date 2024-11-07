@@ -1,12 +1,19 @@
-/* Hover-only Rainbow Underline for Buttons */
+/* Hover-only Rainbow Underline */
+.rainbow-underline {
+    position: relative;
+}
+
 .rainbow-underline::after {
     content: '';
     display: block;
-    width: 100%;
+    width: 40%; /* Adjust width as needed for the underline size */
     height: 3px;
     background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
     background-size: 200% 100%;
-    margin-top: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px; /* Adjust distance from text */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
