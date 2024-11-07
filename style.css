@@ -48,7 +48,7 @@ header nav ul li a {
     animation: rainbow-flow 2s infinite;
 }
 
-}
+
 
 @keyframes rainbow-flow {
     0% { background-position: 0 0; }
