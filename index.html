@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 5 Showcase</title>
+    <title>Sean Gordon's Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navigation Menu -->
     <header>
         <nav>
             <ul>
-                <li><a href="index.html" class="rainbow-underline">Home</a></li>
+                <li><a href="#home" class="rainbow-underline">Home</a></li>
                 <li><a href="#about" class="rainbow-underline">About Me</a></li>
                 <li><a href="unit1.html" class="rainbow-underline">Unit 1</a></li>
                 <li><a href="unit2.html" class="rainbow-underline">Unit 2</a></li>
                 <li><a href="unit3.html" class="rainbow-underline">Unit 3</a></li>
                 <li><a href="unit4.html" class="rainbow-underline">Unit 4</a></li>
-                <li><a href="unit5.html" class="rainbow-underline">Unit 5</a></li>
+                <li><a href="unit5.html" class="rainbow-underline">Unit 5</a></li> <!-- New Unit 5 button -->
             </ul>
         </nav>
     </header>
+    
 
-    <!-- Unit 5 Content -->
+    <!-- Main Content -->
     <main>
-        <section id="unit5-showcase">
-            <h1>Unit 5 Showcase</h1>
-            <div>
-                <img src="unit5/sell1.jpg" alt="Image sell1" class="centered-image">
-                <img src="unit5/sell2.jpg" alt="Image sell2" class="centered-image">
-            </div>
-            <div>
-                <video controls class="centered-image">
-                    <source src="unit5/sellvideo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+        <section id="home">
+            <h1>Welcome to my portfolio</h1>
+            <p>Explore my work, learn more about me, and get in touch!</p>
+            <img src="iosapp2.jpg" alt="A screenshot of Sean's iOS app" class="centered-image">
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a high school student passionate about iOS development.</p>
+            <p>Hobbies: Basketball, Drawing</p>
+            <p>Interests: Art, Sports, and Tech</p>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form action="mailto:seanclaude.gordon@vhhscougars.org" method="post" enctype="text/plain">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <!-- My Name Section -->
+        <section id="my-name">
+            <h2>My Name</h2>
+            <audio controls>
+                <source src="seanname.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
         </section>
     </main>
 
@@ -43,4 +66,5 @@
         <p>© 2024 Sean Gordon. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
