@@ -1,19 +1,44 @@
-/* Hover-only Rainbow Underline */
-.rainbow-underline {
-    position: relative;
+/* Sunset gradient background */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to right, #FF7E5F, #FFB47F);
+    font-family: 'Georgia', serif;
+    color: #fff;
+    text-align: center;
 }
 
+/* Navigation Menu */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+}
+
+/* Rainbow flowing underline for buttons and image */
+/* Hover-only Rainbow Underline for Buttons */
 .rainbow-underline::after {
     content: '';
     display: block;
-    width: 40%; /* Adjust width as needed for the underline size */
+    width: 100%;
     height: 3px;
     background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
     background-size: 200% 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -5px; /* Adjust distance from text */
+    margin-top: 5px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -21,4 +46,28 @@
 .rainbow-underline:hover::after {
     opacity: 1;
     animation: rainbow-flow 2s infinite;
+}
+
+}
+
+@keyframes rainbow-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Centering images */
+.centered-image {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .centered-image {
+        width: 80%;
+    }
 }
