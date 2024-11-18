@@ -55,14 +55,15 @@ header nav ul li a {
     100% { background-position: 200% 0; }
 }
 
-/* Centering images */
-.centered-image {
+/* Centering images and scaling */
+.centered-image img, 
+.centered-image video {
+    max-width: 90%; /* Limit image and video to 90% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: add a subtle shadow */
     display: block;
-    margin: 20px auto;
-    width: 50%;
-    height: auto;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto; /* Center the media */
 }
 
 /* Responsive Design */
