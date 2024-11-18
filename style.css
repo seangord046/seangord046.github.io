@@ -69,6 +69,6 @@ header nav ul li a {
 /* Responsive Design */
 @media (max-width: 768px) {
     .centered-image {
-        width: 80%;
+        width: 60%;
     }
 }
