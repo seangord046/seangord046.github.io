@@ -13,13 +13,13 @@ header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Center the navigation items */
     background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Add spacing between buttons */
 }
 
 header nav ul li a {
