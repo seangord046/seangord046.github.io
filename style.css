@@ -9,14 +9,15 @@ html, body {
 }
 
 /* Navigation Menu */
+/* Navigation Menu */
 header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex; /* Use flexbox to align items in a row */
     justify-content: center; /* Center the navigation items */
-    background-color: rgba(0, 0, 0, 0.7);
 }
+
 
 header nav ul li {
     margin: 0 15px; /* Add spacing between buttons */

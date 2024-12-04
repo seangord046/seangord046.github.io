@@ -26,47 +26,58 @@
 
     <main>
         <section>
-            <h1>Unit 7</h1>
-            <p>This app was made using Xcode.</p>
+            <h1>Unit 7 - Bill Reminder App</h1>
+            <p>This app was made using Xcode. Swift is a powerful programming language for iOS development that allows developers to create fast, safe, and interactive applications.</p>
+            <div class="centered-image">
+                <img src="unit7/unit7pic.png" alt="Unit 7 Screenshot" id="unit7-img">
+                <button onclick="toggleFullscreen('unit7-img')">Resize</button>
+            </div>
         </section>
 
-        <section id="swift-summary">
-            <h2>What is Swift Coding?</h2>
-            <p>
-                Swift is a powerful and intuitive programming language developed by Apple for creating apps on iOS, macOS, watchOS, and tvOS.
-                It is designed to be easy to learn, safe, and fast, offering modern features like type safety and error handling.
-                Swift is widely used for creating apps that are reliable, efficient, and secure.
-            </p>
+        <section>
+            <h2>Updated Video Showcase</h2>
+            <div class="centered-image">
+                <video controls id="unit7-video">
+                    <source src="unit7/lastappvid5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
 
-        <section id="unit7-media">
-            <h2>Media</h2>
-            <img src="unit7/unit7pic.png" alt="Unit 7 Image" class="centered-image">
-            <video controls class="centered-image">
-                <source src="unit7/unit7vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-
-        <section id="week-2">
-            <h2>Week 2</h2>
-            <video controls class="centered-image">
-                <source src="unit7/unit7w2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>
-                In Week 2, I introduced two new features to the app:
-            </p>
-            <ol>
-                <li><strong>Budgeting Guide:</strong> This feature helps users determine if they are within their budget for bills.</li>
-                <li><strong>Pay Bill Option:</strong> Users can now directly pay their bills through the app, making bill management easier and more efficient.</li>
-            </ol>
+        <section id="week2">
+            <h2>Week 2 Features</h2>
+            <p>New features added to the app:</p>
+            <ul>
+                <li>A budgeting guide to check if you are within your budget for bills.</li>
+                <li>An option to pay the bill directly through the app.</li>
+            </ul>
+            <div class="centered-image">
+                <video controls>
+                    <source src="unit7/unit7w2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="centered-image">
+                <img src="unit7/codepic.png" alt="Code Example Screenshot" id="code-pic">
+                <button onclick="toggleFullscreen('code-pic')">Resize</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Sean Gordon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleFullscreen(elementId) {
+            const element = document.getElementById(elementId);
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else {
+                element.requestFullscreen();
+            }
+        }
+    </script>
 </body>
 
 </html>
