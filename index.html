@@ -44,15 +44,22 @@
         </section>
 
         <!-- Get in Touch Section -->
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <form action="mailto:seanclaude.gordon@vhhscougars.org" method="post" enctype="text/plain">
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea>
-                <br>
-                <button type="submit">Send</button>
-            </form>
-        </section>
+        <script>
+    function sendEmail(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Create a mailto link
+        const mailtoLink = `mailto:scrgordon07@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+
+        // Open the mailto link
+        window.location.href = mailtoLink;
+    }
+</script>
+
 
         <!-- My Name Section -->
         <section id="my-name">
@@ -67,6 +74,7 @@
     <footer>
         <p>© 2024 Sean Gordon. All rights reserved.</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
