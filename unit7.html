@@ -28,16 +28,25 @@
         <section>
             <h1>Unit 7 - Bill Reminder App</h1>
             <p>This app was made using Xcode. Swift is a powerful programming language for iOS development that allows developers to create fast, safe, and interactive applications.</p>
-            <div class="centered-image">
-                <img src="unit7/unit7pic.png" alt="Unit 7 Screenshot" id="unit7-img">
-                <button onclick="toggleFullscreen('unit7-img')">Resize</button>
+        </section>
+
+        <!-- Image Grid Section -->
+        <section id="image-grid">
+            <h2>Image Gallery</h2>
+            <div class="image-grid">
+                <div class="grid-item">
+                    <img src="unit7/unit7pic.png" alt="Unit 7 Screenshot">
+                </div>
+                <div class="grid-item">
+                    <img src="unit7/codepic.png" alt="Code Example Screenshot">
+                </div>
             </div>
         </section>
 
         <section>
             <h2>Updated Video Showcase</h2>
             <div class="centered-image">
-                <video controls id="unit7-video">
+                <video controls>
                     <source src="unit7/lastappvid5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -57,27 +66,12 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <div class="centered-image">
-                <img src="unit7/codepic.png" alt="Code Example Screenshot" id="code-pic">
-                <button onclick="toggleFullscreen('code-pic')">Resize</button>
-            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Sean Gordon. All rights reserved.</p>
     </footer>
-
-    <script>
-        function toggleFullscreen(elementId) {
-            const element = document.getElementById(elementId);
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-            } else {
-                element.requestFullscreen();
-            }
-        }
-    </script>
 </body>
 
 </html>
