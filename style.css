@@ -1,11 +1,11 @@
-/* Global Body Styling with Gradient Background */
-body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif; /* Use a clean font */
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to blue gradient */
-    min-height: 100vh; /* Ensure it covers the full height of the viewport */
-    color: white; /* Set text color to contrast with the background */
+/* Sunset gradient background */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to right, #FF7E5F, #FFB47F);
+    font-family: 'Georgia', serif;
+    color: #fff;
+    text-align: center;
 }
 
 /* Navigation Menu */
@@ -13,95 +13,89 @@ header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
 header nav ul li {
-    margin: 0 10px;
+    display: inline;
+    margin: 0 15px;
 }
 
 header nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
+    font-size: 1.2rem;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+/* Hover-only Rainbow Underline for Buttons */
+.rainbow-underline::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 200% 100%;
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Grid Container for Images */
+.rainbow-underline:hover::after {
+    opacity: 1;
+    animation: rainbow-flow 2s infinite;
+}
+
+@keyframes rainbow-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Grid container for images */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller columns */
-    gap: 10px; /* Spacing between images */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
     justify-items: center;
     padding: 20px;
+    max-width: 90%;
+    margin: 20px auto;
 }
 
-/* Individual Grid Items */
-.image-grid img {
-    width: 100%; /* Scale to fit within the grid item */
-    max-width: 120px; /* Smaller max size */
+/* Individual grid items */
+.grid-item img {
+    width: 100%;
+    max-width: 120px;
     height: auto;
-    border-radius: 5px; /* Optional: Slightly rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease;
 }
 
-.image-grid img:hover {
-    transform: scale(1.1); /* Slight zoom effect */
+.grid-item img:hover {
+    transform: scale(1.1);
 }
 
-/* Video Styling */
+/* Centered videos */
 .centered-image video {
-    max-width: 300px; /* Smaller max width for videos */
-    width: 100%; /* Responsive scaling */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 300px;
+    width: 100%;
+    height: auto;
     margin: 10px auto;
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Shadow for styling */
-}
-
-.centered-image {
-    text-align: center; /* Center align the video and image container */
-}
-
-/* Section Styling */
-main section {
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadows for depth */
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-}
-
-/* Hover Effect for Navigation Links */
-.rainbow-underline:hover {
-    text-decoration: underline;
-    color: lightblue;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .video {
-        width: 100%; /* Full width on smaller screens */
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
-    .image-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller columns for smaller screens */
+    .centered-image video {
+        max-width: 100%;
     }
 }
