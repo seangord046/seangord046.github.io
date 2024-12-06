@@ -1,59 +1,49 @@
-/* Grid container for images */
+/* Global Body Styling with Gradient Background */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to blue gradient */
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    color: white; /* Set text color to contrast with the background */
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Grid Container for Images */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust number of columns based on screen size */
-    gap: 15px; /* Space between items */
-    justify-items: center; /* Center each grid item */
-    margin: 20px auto;
-    max-width: 90%; /* Limit the grid width */
-}
-
-/* Individual grid items */
-.grid-item img {
-    width: 100%; /* Ensure the image fits within the grid item */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 150px; /* Limit maximum size */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow */
-    cursor: pointer; /* Indicate interactivity */
-    transition: transform 0.3s ease; /* Add hover effect */
-}
-
-/* Hover effect for images */
-.grid-item img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
-/* Video styling */
-.video {
-    display: block;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px; /* Limit video size */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .video {
-        width: 100%; /* Full width on smaller screens */
-    }
-    .image-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust columns for smaller screens */
-    }
-}
-/* Grid for Images */
-/* Grid for Images */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller columns */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller columns */
     gap: 10px; /* Spacing between images */
     justify-items: center;
     padding: 20px;
 }
 
+/* Individual Grid Items */
 .image-grid img {
     width: 100%; /* Scale to fit within the grid item */
     max-width: 120px; /* Smaller max size */
@@ -80,4 +70,38 @@
 
 .centered-image {
     text-align: center; /* Center align the video and image container */
+}
+
+/* Section Styling */
+main section {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add shadows for depth */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Hover Effect for Navigation Links */
+.rainbow-underline:hover {
+    text-decoration: underline;
+    color: lightblue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller columns for smaller screens */
+    }
 }
