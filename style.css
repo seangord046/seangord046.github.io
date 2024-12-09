@@ -13,13 +13,15 @@ header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: transparent; /* Transparent background */
     text-align: center;
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the navigation buttons */
+    align-items: center;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Spacing between buttons */
 }
 
 header nav ul li a {
@@ -27,6 +29,7 @@ header nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 15px;
+    display: inline-block;
 }
 
 /* Hover-only Rainbow Underline for Buttons */
