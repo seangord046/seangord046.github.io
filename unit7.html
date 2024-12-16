@@ -25,11 +25,13 @@
     </header>
 
     <main>
+        <!-- Existing Section 1 -->
         <section>
             <h1>Unit 7 - Bill Reminder App</h1>
             <p>This app was made using Xcode. Swift is a powerful programming language for iOS development that allows developers to create fast, safe, and interactive applications.</p>
         </section>
 
+        <!-- Existing Section 2 -->
         <section>
             <h2>Week 1</h2>
             <div class="image-grid">
@@ -45,6 +47,7 @@
             </div>
         </section>
 
+        <!-- Existing Section 3 -->
         <section>
             <h2>Week 2</h2>
             <p>New features added to the app include:</p>
@@ -67,13 +70,16 @@
             <h2>Text-to-Speech Presentation</h2>
             <p>Click the button below to hear the presentation and see the app's features in action.</p>
             <button onclick="startPresentation()">Start Presentation</button>
-            <div id="showcase">
-                <!-- Placeholder for image/video showcase -->
-                <img id="showcase-image" src="" alt="Showcase Image" style="display: none; max-width: 150px; border-radius: 15px;">
-                <video id="showcase-video" controls style="display: none; max-width: 150px; border-radius: 15px;">
-                    <source src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="image-grid">
+                <div class="grid-item">
+                    <img id="showcase-image" src="" alt="Showcase Image" style="display: none;">
+                </div>
+                <div class="grid-item">
+                    <video id="showcase-video" controls style="display: none;">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </section>
     </main>
@@ -84,7 +90,7 @@
 
     <script>
         function startPresentation() {
-            const descriptionSteps = [
+            const steps = [
                 {
                     text: "Welcome to my Bill Reminder App. This app helps you manage your bills efficiently.",
                     type: "image",
@@ -102,17 +108,16 @@
                 }
             ];
 
-            let stepIndex = 0;
+            let currentStep = 0;
 
             function playStep() {
-                if (stepIndex >= descriptionSteps.length) return;
+                if (currentStep >= steps.length) return;
 
-                const { text, type, src } = descriptionSteps[stepIndex];
+                const { text, type, src } = steps[currentStep];
                 const speech = new SpeechSynthesisUtterance(text);
                 speech.lang = 'en-US';
-                speech.rate = 1;
 
-                // Update showcase based on step type
+                // Showcase image or video based on the step
                 const img = document.getElementById("showcase-image");
                 const vid = document.getElementById("showcase-video");
                 img.style.display = "none";
@@ -127,20 +132,20 @@
                     vid.play();
                 }
 
-                // Move to next step when speech ends
+                // Move to the next step after speech ends
                 speech.onend = () => {
                     if (type === "video") {
                         vid.onended = () => {
-                            stepIndex++;
+                            currentStep++;
                             playStep();
                         };
                     } else {
-                        stepIndex++;
+                        currentStep++;
                         playStep();
                     }
                 };
 
-                // Start speaking
+                // Speak the text
                 window.speechSynthesis.speak(speech);
             }
 
