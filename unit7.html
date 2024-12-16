@@ -32,11 +32,17 @@
 
         <section>
             <h2>Week 1</h2>
-            <img src="unit7/unit7pic.png" alt="Unit 7 App Screenshot" class="centered-image">
-            <video controls class="centered-image">
-                <source src="unit7/unit7vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="image-grid">
+                <div class="grid-item">
+                    <img src="unit7/unit7pic.png" alt="Unit 7 App Screenshot">
+                </div>
+                <div class="grid-item">
+                    <video controls>
+                        <source src="unit7/unit7vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -46,10 +52,14 @@
                 <li>A budgeting guide to check if the user is within their budget for bills.</li>
                 <li>An option to pay the bill directly through the app.</li>
             </ul>
-            <video controls class="centered-image">
-                <source src="unit7/unit7w2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="image-grid">
+                <div class="grid-item">
+                    <video controls>
+                        <source src="unit7/unit7w2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </section>
 
         <!-- New Section: Text-to-Speech Presentation -->
@@ -57,10 +67,10 @@
             <h2>Text-to-Speech Presentation</h2>
             <p>Click the button below to hear the presentation and see the app's features in action.</p>
             <button onclick="startPresentation()">Start Presentation</button>
-            <div id="showcase" class="centered-image">
+            <div id="showcase">
                 <!-- Placeholder for image/video showcase -->
-                <img id="showcase-image" src="" alt="Showcase Image" style="display: none; max-width: 100%; border-radius: 15px;">
-                <video id="showcase-video" controls style="display: none; max-width: 100%; border-radius: 15px;">
+                <img id="showcase-image" src="" alt="Showcase Image" style="display: none; max-width: 150px; border-radius: 15px;">
+                <video id="showcase-video" controls style="display: none; max-width: 150px; border-radius: 15px;">
                     <source src="" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -87,11 +97,6 @@
                 },
                 {
                     text: "New features include a budgeting guide to track if you're within your financial goals.",
-                    type: "image",
-                    src: "unit7/unit7w2pic.png"
-                },
-                {
-                    text: "You can also pay bills directly through the app. Built using Swift in Xcode, the app is optimized for iOS devices.",
                     type: "video",
                     src: "unit7/unit7w2.mp4"
                 }
