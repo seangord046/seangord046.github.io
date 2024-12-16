@@ -6,46 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit 7 - Sean Gordon's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Lightbox styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
-
-        .lightbox:target {
-            display: flex;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2rem;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .description {
-            text-align: center;
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -70,69 +30,118 @@
             <p>This app was made using Xcode. Swift is a powerful programming language for iOS development that allows developers to create fast, safe, and interactive applications.</p>
         </section>
 
-        <!-- Image Grid Section -->
-        <section id="image-grid">
-            <h2>Image Gallery</h2>
-            <div class="image-grid">
-                <div class="grid-item">
-                    <a href="#lightbox1">
-                        <img src="unit7/unit7pic.png" alt="Unit 7 Screenshot">
-                    </a>
-                    <p class="description">This image showcases the main user interface of the app. It serves as the central hub, allowing users to navigate seamlessly to various pages and features with ease.</p>
-                </div>
-                <div class="grid-item">
-                    <a href="#lightbox2">
-                        <img src="unit7/codepic.png" alt="Code Example Screenshot" style="max-width: 200px;">
-                    </a>
-                    <p class="description">The code part of the AddBillView, adds an interface for users to add bills they wish to be reminded of. Once you've added your bill it shows up on the Bills option on the app.</p>
-                </div>
-            </div>
+        <section>
+            <h2>Week 1</h2>
+            <img src="unit7/unit7pic.png" alt="Unit 7 App Screenshot" class="centered-image">
+            <video controls class="centered-image">
+                <source src="unit7/unit7vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
-
-        <!-- Lightbox for Images -->
-        <div id="lightbox1" class="lightbox">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="unit7/unit7pic.png" alt="Unit 7 Screenshot">
-        </div>
-        <div id="lightbox2" class="lightbox">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="unit7/codepic.png" alt="Code Example Screenshot">
-        </div>
 
         <section>
-            <h2>Final Video Showcase</h2>
-            <div class="centered-image">
-                <video controls>
-                    <source src="unit7/lastappvid5.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="description">This video presents the final version of the app, which includes key features such as setting up reminders for due bills. It demonstrates how the app functions once it's completely finished. </p>
-            </div>
+            <h2>Week 2</h2>
+            <p>New features added to the app include:</p>
+            <ul>
+                <li>A budgeting guide to check if the user is within their budget for bills.</li>
+                <li>An option to pay the bill directly through the app.</li>
+            </ul>
+            <video controls class="centered-image">
+                <source src="unit7/unit7w2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
 
-        <!-- Video Gallery Section -->
-        <section id="video-gallery">
-            <h2>Video Gallery</h2>
-            <div class="centered-image">
-                <h3>Week 1's Video</h3>
-                <video controls>
-                    <source src="unit7/unit7vid.mp4" type="video/mp4">
+        <!-- New Section: Text-to-Speech Presentation -->
+        <section>
+            <h2>Text-to-Speech Presentation</h2>
+            <p>Click the button below to hear the presentation and see the app's features in action.</p>
+            <button onclick="startPresentation()">Start Presentation</button>
+            <div id="showcase" class="centered-image">
+                <!-- Placeholder for image/video showcase -->
+                <img id="showcase-image" src="" alt="Showcase Image" style="display: none; max-width: 100%; border-radius: 15px;">
+                <video id="showcase-video" controls style="display: none; max-width: 100%; border-radius: 15px;">
+                    <source src="" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <p class="description">This video showcases the first new feature of the app which allows you to see your bill history and when it's due.</p>
             </div>
-            <div class="centered-image">
-                <h3>Week 2's Video</h3>
-                <video controls>
-                    <source src="unit7/unit7w2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <p class="description">This video showcases the first feature of adding a bill to your bill list and it allowing you to pay the bill and showcase the budgeting amount.</p>
-            </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2024 Sean Gordon. All rights reserved.</p>
     </footer>
+
+    <script>
+        function startPresentation() {
+            const descriptionSteps = [
+                {
+                    text: "Welcome to my Bill Reminder App. This app helps you manage your bills efficiently.",
+                    type: "image",
+                    src: "unit7/unit7pic.png"
+                },
+                {
+                    text: "With a user-friendly interface, it allows you to input bills, set reminders for due dates, and even pay bills directly.",
+                    type: "video",
+                    src: "unit7/unit7vid.mp4"
+                },
+                {
+                    text: "New features include a budgeting guide to track if you're within your financial goals.",
+                    type: "image",
+                    src: "unit7/unit7w2pic.png"
+                },
+                {
+                    text: "You can also pay bills directly through the app. Built using Swift in Xcode, the app is optimized for iOS devices.",
+                    type: "video",
+                    src: "unit7/unit7w2.mp4"
+                }
+            ];
+
+            let stepIndex = 0;
+
+            function playStep() {
+                if (stepIndex >= descriptionSteps.length) return;
+
+                const { text, type, src } = descriptionSteps[stepIndex];
+                const speech = new SpeechSynthesisUtterance(text);
+                speech.lang = 'en-US';
+                speech.rate = 1;
+
+                // Update showcase based on step type
+                const img = document.getElementById("showcase-image");
+                const vid = document.getElementById("showcase-video");
+                img.style.display = "none";
+                vid.style.display = "none";
+
+                if (type === "image") {
+                    img.src = src;
+                    img.style.display = "block";
+                } else if (type === "video") {
+                    vid.src = src;
+                    vid.style.display = "block";
+                    vid.play();
+                }
+
+                // Move to next step when speech ends
+                speech.onend = () => {
+                    if (type === "video") {
+                        vid.onended = () => {
+                            stepIndex++;
+                            playStep();
+                        };
+                    } else {
+                        stepIndex++;
+                        playStep();
+                    }
+                };
+
+                // Start speaking
+                window.speechSynthesis.speak(speech);
+            }
+
+            playStep();
+        }
+    </script>
 </body>
 
 </html>
