@@ -36,7 +36,7 @@
             <h2>Week 1</h2>
             <div class="image-grid">
                 <div class="grid-item">
-                    <img src="unit7/unit7pic.png" alt="Unit 7 App Screenshot">
+                    <img src="unit7/unit7pic.png" alt="Unit 7 App Screenshot" onclick="openFullscreen(this)">
                 </div>
                 <div class="grid-item">
                     <video controls>
@@ -52,7 +52,7 @@
             <h2>Week 2</h2>
             <p>New features added to the app include:</p>
             <ul>
-                <li>A budgeting guide to check if the user is within their budget for bills.</li>
+                <li>A budgeting guide to check if you're within your budget for bills.</li>
                 <li>An option to pay the bill directly through the app.</li>
             </ul>
             <div class="image-grid">
@@ -82,6 +82,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- New Section: Codepic Image -->
+        <section>
+            <h2>Codepic Showcase</h2>
+            <div class="image-grid">
+                <div class="grid-item">
+                    <img src="unit7/codepic.png" alt="Codepic Showcase" onclick="openFullscreen(this)">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -89,6 +99,17 @@
     </footer>
 
     <script>
+        // Fullscreen functionality for images
+        function openFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen(); // Safari
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen(); // IE/Edge
+            }
+        }
+
         function startPresentation() {
             const steps = [
                 {
