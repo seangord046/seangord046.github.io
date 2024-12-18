@@ -82,14 +82,16 @@ header nav ul li a {
 }
 
 /* Centered videos */
-.centered-image video {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+.centered-image video, 
+.image-grid video, 
+#showcase-video {
+    max-width: 250px; /* Shrink video size */
+    width: 100%; /* Responsive to parent container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px auto; /* Center with spacing */
+    display: block; /* Center element */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for better design */
+    border-radius: 10px; /* Rounded corners */
 }
 
 /* Responsive Design */
